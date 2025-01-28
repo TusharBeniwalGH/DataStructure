@@ -20,3 +20,4 @@ if (sum>max_sum){max_sum=sum;}
 Console.WriteLine("Max sum of subarray of size "+k+" from the array "+ string.Join(" ", array) +" is: ");
 Console.WriteLine(max_sum);
 Console.Read();
+
