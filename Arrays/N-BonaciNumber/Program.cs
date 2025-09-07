@@ -1,5 +1,4 @@
-﻿//N-bonnaci number , Print first n-bonnaci numbers
-int n=5, m=10;
+﻿int n=5, m=10;
 
 int[] array=new int[m];
 
@@ -24,5 +23,11 @@ for (int i = 0; i < array.Length; i++)
 {
     Console.Write(array[i] + " ");
 }
+
+Dictionary<int, int> dict = new Dictionary<int, int>();
+dict.Add(1, 1);
+dict.Add(2, 1);
+int? vale=dict.Where(x => x.Key > 2)?.Select(x => x.Key)?.FirstOrDefault();
+Console.Write(vale==0 ? -1 : vale.ToString());
 
 Console.Read();
