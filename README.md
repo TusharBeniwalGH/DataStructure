@@ -81,6 +81,34 @@ Implementation of an algorithm to find all duplicate numbers in an array using D
 - Proper namespace organization
 - Clean console output formatting
 
+#### Maximum Subarray Sum (Kadane's Algorithm)
+Implementation of Kadane's algorithm to find the maximum sum of any contiguous subarray within a given array.
+
+**Current Implementation:**
+- **Input:** Array `[1, 2, 3, -9, -6, 4, 7]`
+- **Method:** Classic Kadane's algorithm
+- **Output:** Maximum sum of any contiguous subarray with array display
+
+**Algorithm Steps:**
+1. Initialize maxSum and currentSum with the first element
+2. Iterate through the array starting from the second element
+3. For each element, decide whether to extend existing subarray or start new one
+4. Update currentSum as max(current element, currentSum + current element)
+5. Update maxSum if currentSum is greater than current maximum
+6. Display the array and final maximum sum result
+
+**Time Complexity:** O(n) where n is the number of elements in the array  
+**Space Complexity:** O(1)
+
+**Example Output:** For the given array `[1, 2, 3, -9, -6, 4, 7]`, the maximum subarray sum is `11` (from subarray `[4, 7]`)
+
+**Implementation Features:**
+- Proper Kadane's algorithm implementation
+- Tracks both current sum and global maximum
+- Handles arrays with negative numbers correctly
+- Clear console output with array display
+- Efficient single-pass algorithm
+
 #### N-Bonacci Numbers
 Implementation of N-bonacci sequence generator that prints the first m numbers of an n-bonacci sequence.
 
@@ -134,6 +162,9 @@ Arrays/
 ├── Duplicate/
 │   ├── Program.cs               # Duplicate number detection algorithm
 │   └── Duplicate.csproj         # C# project file
+├── MaxSubArraySum/
+│   ├── Program.cs               # Maximum subarray sum implementation
+│   └── MaxSubArraySum.csproj    # C# project file
 └── N-BonaciNumber/
     ├── Program.cs               # N-bonacci sequence generator
     └── N-BonaciNumber.csproj    # C# project file
@@ -154,7 +185,7 @@ Each project can be run using the following methods:
 
 1. **Using Main Solution (Recommended):**
    - Open `Arrays/Arrays.sln` in Visual Studio
-   - All four projects are included in the solution
+   - All five projects are included in the solution
    - Set desired project as startup project
    - Build and run the solution
 
